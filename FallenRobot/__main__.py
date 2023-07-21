@@ -494,7 +494,7 @@ def Zoney_about_callback(update: Update, context: CallbackContext):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data"zoney_back")]]
+                [[InlineKeyboardButton(text="◁", callback_data="zoney_back")]]
             ),
         )
     elif query.data == "zoney_back":
