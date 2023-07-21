@@ -8,7 +8,7 @@
   <img src="https://github.com/ArchBots/ArchRobot/blob/master/FallenRobot/resources/fglitch.gif">
 </p>
 
-_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ᴀʀᴄʜ ✘ ʀᴏʙᴏᴛ](https://t.me/FallenXRobot)**_
+_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ᴀʀᴄʜ ✘ ʀᴏʙᴏᴛ](https://t.me/UMIKO_CHAT_BOT)**_
 ━━━━━━━━━━━━━━━━━━━━
 
 <p align="center">
