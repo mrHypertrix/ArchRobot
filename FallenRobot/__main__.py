@@ -72,24 +72,30 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*ʜᴇʏ* {}, 🥀
+🌸 ʜᴇʏ {}, 
 
-*๏ ᴛʜɪs ɪs* {} !
-➻ ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
+* ᴛʜɪs ɪs* 💫 {} !
 
-──────────────────
-*๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.*
+🌍ᴅɪsᴄᴏᴠᴇʀ ᴛʜᴇ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛ ᴀᴛ ʏᴏᴜʀ sᴇʀᴠɪᴄᴇ! 🥀
+
+🍂 ᴇʟᴇᴠᴀᴛᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ᴡɪᴛʜ ᴇᴀsᴇ.
+🌸 ᴇxᴘᴇʀɪᴇɴᴄᴇ sᴇᴀᴍʟᴇss ᴍᴜsɪᴄ ᴘʟᴀʏʙᴀᴄᴋ ʟɪᴋᴇ ɴᴇᴠᴇʀ ʙᴇғᴏʀᴇ.
+💫 ᴜɴʟᴇᴀsʜ ᴛʜᴇ ᴍᴀɢɪᴄ ᴏғ sᴘᴇᴄɪᴀʟ ᴜsᴇʀ ᴛᴀɢɢɪɴɢ.
+
+*👉 ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴘ & ᴀʙᴏᴜᴛ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴜɴᴄᴏᴠᴇʀ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍʏ ᴄᴀᴘᴀʙɪʟɪᴛɪᴇs ᴀɴᴅ ʜᴏᴡ ɪ ᴄᴀɴ ᴀssɪsᴛ ʏᴏᴜ ʙᴇᴛᴛᴇʀ. ʟᴇᴛ's ᴍᴀᴋᴇ ʏᴏᴜʀ ᴛᴇʟᴇɢʀᴀᴍ ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴇxᴛʀᴀᴏʀᴅɪɴᴀʀʏ! 👈.*
+
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ",
+            text="💫 ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ 💫",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
     [
-        InlineKeyboardButton(text="ʜᴇʟᴩ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
+        InlineKeyboardButton(text="⚙️ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ⚙️", callback_data="help_back"),
+        InlineKeyboardButton(text="💫 ᴛᴀɢɢᴇʀ 💫", callback_data="zoney_"),
     ],
     [
         InlineKeyboardButton(text="❄ ᴀʙᴏᴜᴛ ❄", callback_data="fallen_"),
@@ -102,13 +108,12 @@ buttons = [
 ]
 
 HELP_STRINGS = f"""
-*» {BOT_NAME} ᴇxᴄʟᴜsɪᴠᴇ ꜰᴇᴀᴛᴜʀᴇs*
+*🍂 {BOT_NAME} ᴇxᴄʟᴜsɪᴠᴇ ꜰᴇᴀᴛᴜʀᴇs*
+✨ /start :sᴛᴀʀᴛs ᴛʜᴇ ʙᴏᴛ (ᴀʟʀᴇᴀᴅʏ ᴅᴏɴᴇ).
+🌸 /help : sʜᴏᴡs ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs.
 
-➲ /start : ꜱᴛᴀʀᴛꜱ ᴍᴇ | ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ʏᴏᴜ'ᴠᴇ ᴀʟʀᴇᴀᴅʏ ᴅᴏɴᴇ ɪᴛ.
-➲ /help  : ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ꜱᴇᴄᴛɪᴏɴ.
-  ‣ ɪɴ ᴘᴍ : ᴡɪʟʟ ꜱᴇɴᴅ ʏᴏᴜ ʜᴇʟᴘ ꜰᴏʀ ᴀʟʟ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇꜱ.
-  ‣ ɪɴ ɢʀᴏᴜᴘ : ᴡɪʟʟ ʀᴇᴅɪʀᴇᴄᴛ ʏᴏᴜ ᴛᴏ ᴘᴍ, ᴡɪᴛʜ ᴀʟʟ ᴛʜᴀᴛ ʜᴇʟᴘ ᴍᴏᴅᴜʟᴇꜱ."""
-
+ᴘᴍ: ᴘʀᴏᴠɪᴅᴇs ᴅᴇᴛᴀɪʟᴇᴅ ʜᴇʟᴘ ғᴏʀ ᴀʟʟ sᴜᴘᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇs.
+‣ɢʀᴏᴜᴘs: ʀᴇᴅɪʀᴇᴄᴛs ᴛᴏ ᴘᴍ ғᴏʀ ғᴜʟʟ ʟɪsᴛ ᴏғ ʜᴇʟᴘ ᴍᴏᴅᴜʟᴇs.."""
 IMPORTED = {}
 MIGRATEABLE = []
 HELPABLE = {}
@@ -204,7 +209,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_sticker(
-                "CAACAgQAAxkBAAEJwY9kuhbCj32nPzTlSVCZTVztSnH65gACEQwAApkv6FNf3vrZ3owLqy8E"
+                "CAACAgUAAx0CZJeaugACMXZkuqPcEzAzMpKToLZGtULVci5jiAACzwwAAgZ72VWpE2FmnSJM1i8E"
             )
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
@@ -457,6 +462,42 @@ def Source_about_callback(update: Update, context: CallbackContext):
             ),
         )
     elif query.data == "source_back":
+        first_name = update.effective_user.first_name
+        query.message.edit_text(
+            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
+            reply_markup=InlineKeyboardMarkup(buttons),
+            parse_mode=ParseMode.MARKDOWN,
+            timeout=60,
+            disable_web_page_preview=True,
+        )
+
+def Zoney_about_callback(update: Update, context: CallbackContext):
+    query = update.callback_query
+    if query.data == "zoney_":
+        query.message.edit_text(
+            text=f"""
+🌺 *ᴛʏᴘᴇ ᴀɴʏ ᴛᴇxᴛ ᴀғᴛᴇʀ ᴛʜᴇ ᴄᴏʀʀᴇsᴘᴏɴᴅɪɴɢ ᴄᴏᴍᴍᴀɴᴅ*✨
+
+/htag  - ᴍᴇɴᴛɪᴏɴ ᴀʟʟ ᴛᴀɢs ɪɴ ʜɪɴᴅɪ
+ 
+/engtag - ᴘʀᴏᴅᴜᴄᴇ sᴘᴇᴄɪᴀʟ ᴇɴɢʟɪsʜ ᴛᴀɢs.
+
+/pnbtag  - ᴄʀᴀғᴛ sᴘᴇᴇᴅʏ sᴘᴇᴄɪᴀʟ ᴘᴀɴᴊᴀʙɪ ᴛᴀɢs.
+
+/assamtag  - ɢᴇɴᴇʀᴀᴛᴇ ǫᴜɪᴄᴋ sᴘᴇᴄɪᴀʟ ᴇɴɢʟɪsʜ ᴛᴀɢs.
+
+
+ ❌ /stop - ᴄᴇᴀsᴇ ᴛᴀɢɢɪɴɢ.
+
+ᴅɪsᴄᴏᴠᴇʀ ᴛʜᴇ ᴇxᴄᴇᴘᴛɪᴏɴᴀʟ ᴄᴀᴘᴀʙɪʟɪᴛɪᴇs ᴏғ ᴛʜᴇsᴇ sᴘᴇᴄɪᴀʟ ᴛᴀɢɢᴇʀs ᴀɴᴅ ᴄᴏᴍᴘᴏsᴇ ᴇxᴛʀᴀᴏʀᴅɪɴᴀʀʏ ᴍᴇssᴀɢᴇs! 🚀
+""",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="◁", callback_data="zoney_back")]]
+            ),
+        )
+    elif query.data == "zoney_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
             PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
