@@ -28,26 +28,26 @@ if sys.version_info[0] < 3 or sys.version_info[1] < 6:
     )
     quit(1)
 
-ENV = bool(os.environ.get("ENV", False))
+ENV = bool(os.environ.get("ENV", True))
 
 if ENV:
     API_ID = int(os.environ.get("API_ID", None))
     API_HASH = os.environ.get("API_HASH", None)
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
-    ALLOW_EXCL = os.environ.get("ALLOW_EXCL", False)
+    ALLOW_EXCL = os.environ.get("ALLOW_EXCL", True)
     CASH_API_KEY = os.environ.get("CASH_API_KEY", None)
     DB_URI = os.environ.get("DATABASE_URL")
-    DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
+    DEL_CMDS = bool(os.environ.get("DEL_CMDS", True))
     EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
     INFOPIC = bool(os.environ.get("INFOPIC", "True"))
     LOAD = os.environ.get("LOAD", "").split()
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
     NO_LOAD = os.environ.get("NO_LOAD", "").split()
     START_IMG = os.environ.get(
-        "START_IMG", "https://telegra.ph/file/40eb1ed850cdea274693e.jpg"
+        "START_IMG", "https://telegra.ph/file/94e013900d86ff5899439.jpg"
     )
     STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", True))
-    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "DevilsHeavenMF")
+    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "ARCH_SUPPORTS")
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
     TOKEN = os.environ.get("TOKEN", None)
     TIME_API_KEY = os.environ.get("TIME_API_KEY", None)
@@ -141,7 +141,7 @@ else:
 
 DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
-DEV_USERS.add(1356469075)
+DEV_USERS.add(5827787578)
 
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
