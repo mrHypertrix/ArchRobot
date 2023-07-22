@@ -9,7 +9,7 @@
          "manager",
          "Fallen"
       ],   
-   "repository": "https://github.com/sakil000/ArchRobot",
+   "repository": "https://github.com/mrhypertrix/ArchRobot",
    "stack": "heroku-22",
    "addons": [
       {
@@ -61,7 +61,7 @@
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "6024212623"
+         "value": "5218610039"
       },
       "START_IMG": {
          "description": "Telegraph link of the image which will be shown at start command.",
