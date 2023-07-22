@@ -473,9 +473,61 @@ def Source_about_callback(update: Update, context: CallbackContext):
 
 def Zoney_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query.data == "zoney_":
+     if query.data == "zoney_":
         query.message.edit_text(
             text=f"""
+**👀 Hey Baby 🖤** \n\n🌺 Welcome to our  {dispatcher.bot.first_name}  lovely community! 🍷📀 Advanced & 🎭 Enthusiastic 🌱 Supporter 🌼 of VC 🍄 Player 📣\n🕙 24x7 Active » For 🗨️ Telegraм ♨️ Channel 🎸 & 🏓 Groups 🎻\n💐 Feel 😍 Free 😇 to 🤖 Add Me 🩸\nSuperior 💥 High 💫 Quality 🦞 Audio 🎧 & 🔊 Video 🌷\nGroup Management: 📣 🎸 🏓 🎻 & more!\nSpecial Tagger: 🎶🎉 Engaging & Groovy!\n\nLet's make this group lively! 🎊🌈
+""",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        
+                 InlineKeyboardButton(
+                    text="ɴᴏʀᴍᴀʟ ᴛᴀɢ",
+                    callback_data="zoney_1",
+                ),
+            
+                InlineKeyboardButton(
+                    text="sᴘᴇᴄɪᴀʟ ᴛᴀɢ",
+                    callback_data="zoney_2",
+                ),
+            ],
+                    [
+                        InlineKeyboardButton(text="◁", callback_data="source_back"),
+                    ],
+                ]
+           ),
+        )
+           elif query.data == "zoney_1":
+        query.message.edit_text(
+            text=f"* ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ꜰᴏʀ Tᴀɢ Aʟʟ: *"
+            f"""
+
+
+Only for admins
+
+❍ /tagall or @all '(reply to message or add another message) To mention all members in your group, without exception.
+
+❍ /cancel to stop ongoing tagg
+
+""",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text="◁", callback_data="zoney_"),
+                    ]
+                ]
+            ),
+        )
+    elif query.data == "zoney_2":
+        query.message.edit_text(
+            text=f"*sᴘᴇᴄɪᴀʟ ᴛᴀɢɢᴇʀ*"
+            f"""
+
 🌺 *ᴛʏᴘᴇ ᴀɴʏ ᴛᴇxᴛ ᴀғᴛᴇʀ ᴛʜᴇ ᴄᴏʀʀᴇsᴘᴏɴᴅɪɴɢ ᴄᴏᴍᴍᴀɴᴅ*✨
 
 /htag  - ᴍᴇɴᴛɪᴏɴ ᴀʟʟ ᴛᴀɢs ɪɴ ʜɪɴᴅɪ
@@ -494,18 +546,23 @@ def Zoney_about_callback(update: Update, context: CallbackContext):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data="zoney_back")]]
+                [
+                    [
+                        InlineKeyboardButton(text="◁", callback_data="zoney_"),
+                    ]
+                ]
             ),
         )
-    elif query.data == "zoney_back":
+   elif query.data == "zoney_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
-            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
+            PM_START_TEXT.format(escape_markdown(first_name), (START_IMG), BOT_NAME),
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
-            disable_web_page_preview=True,
+            disable_web_page_preview=False,
         )
+
 
 
 def get_help(update: Update, context: CallbackContext):
