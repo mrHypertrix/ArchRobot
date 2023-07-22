@@ -79,31 +79,32 @@ PM_START_TEXT = """
 🌍ᴅɪsᴄᴏᴠᴇʀ ᴛʜᴇ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛ ᴀᴛ ʏᴏᴜʀ sᴇʀᴠɪᴄᴇ! 🥀
 
 🍂 ᴇʟᴇᴠᴀᴛᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ᴡɪᴛʜ ᴇᴀsᴇ.
+
 🌸 ᴇxᴘᴇʀɪᴇɴᴄᴇ sᴇᴀᴍʟᴇss ᴍᴜsɪᴄ ᴘʟᴀʏʙᴀᴄᴋ ʟɪᴋᴇ ɴᴇᴠᴇʀ ʙᴇғᴏʀᴇ.
+
 💫 ᴜɴʟᴇᴀsʜ ᴛʜᴇ ᴍᴀɢɪᴄ ᴏғ sᴘᴇᴄɪᴀʟ ᴜsᴇʀ ᴛᴀɢɢɪɴɢ.
 
 *👉 ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴘ & ᴀʙᴏᴜᴛ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴜɴᴄᴏᴠᴇʀ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍʏ ᴄᴀᴘᴀʙɪʟɪᴛɪᴇs ᴀɴᴅ ʜᴏᴡ ɪ ᴄᴀɴ ᴀssɪsᴛ ʏᴏᴜ ʙᴇᴛᴛᴇʀ. ʟᴇᴛ's ᴍᴀᴋᴇ ʏᴏᴜʀ ᴛᴇʟᴇɢʀᴀᴍ ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴇxᴛʀᴀᴏʀᴅɪɴᴀʀʏ! 👈.*
-
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="💫 ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ 💫",
+            text="ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
     [
-        InlineKeyboardButton(text="⚙️ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ⚙️", callback_data="help_back"),
-        InlineKeyboardButton(text="💫 ᴛᴀɢɢᴇʀ 💫", callback_data="zoney_"),
+        InlineKeyboardButton(text="ᴍᴀɴᴀɢᴇᴍᴇɴᴛ", callback_data="help_back"),
+        InlineKeyboardButton(text="ᴛᴀɢɢᴇʀ", callback_data="zoney_"),
     ],
     [
-        InlineKeyboardButton(text="❄ ᴀʙᴏᴜᴛ ❄", callback_data="fallen_"),
-        InlineKeyboardButton(text="✨ sᴜᴩᴩᴏʀᴛ ✨", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="fallen_"),
+        InlineKeyboardButton(text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
-        InlineKeyboardButton(text="🥀 ᴅᴇᴠᴇʟᴏᴩᴇʀ 🥀", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="☁️ sᴏᴜʀᴄᴇ ☁️", callback_data="source_"),
+        InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="sᴏᴜʀᴄᴇ", callback_data="source_"),
     ],
 ]
 
@@ -208,11 +209,27 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name
-            update.effective_message.reply_sticker(
-                "CAACAgUAAx0CZJeaugACMXZkuqPcEzAzMpKToLZGtULVci5jiAACzwwAAgZ72VWpE2FmnSJM1i8E"
+            
+            x=update.effective_message.reply_sticker(
+                "CAACAgUAAx0CZJeaugACM3Jku4rGkBHlRZKsL2b46mrVy4nRfAAC-QoAAuMU0VUkRG7cx9rMhC8E")
+            x.delete()
+            usr = update.effective_user
+            lol = update.effective_message.reply_text(
+                PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
             )
+            time.sleep(0.4)
+            lol.edit_text("🌸ᴡᴇʟᴄᴏᴍᴇ🌸.")
+            time.sleep(0.4)
+            lol.edit_text("ʟᴏᴀᴅɪɴɢ..")
+            time.sleep(0.4)
+            lol.edit_text("ʟᴏᴀᴅɪɴɢ....")
+            time.sleep(0.4)
+            lol.edit_text("ʟᴏᴀᴅᴇᴅ.......🌸")
+            time.sleep(0.4)
+            lol.delete()
+            
             update.effective_message.reply_text(
-                PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
+                PM_START_TEXT.format(escape_markdown(first_name), (START_IMG), BOT_NAME),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
@@ -353,7 +370,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
             text=f"*ʜᴇʏ,*🥀\n  *ᴛʜɪs ɪs {BOT_NAME}*"
-            "\n*ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀꜱɪʟʏ ᴀɴᴅ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ꜱᴄᴀᴍᴍᴇʀꜱ ᴀɴᴅ ꜱᴘᴀᴍᴍᴇʀꜱ.*"
+            "\n*ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ᴛᴀɢᴇʀ ᴀɴᴅ ᴍᴜsɪᴄ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀꜱɪʟʏ ᴀɴᴅ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ꜱᴄᴀᴍᴍᴇʀꜱ ᴀɴᴅ ꜱᴘᴀᴍᴍᴇʀꜱ.*"
             "\n*ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ sǫʟᴀʟᴄʜᴇᴍʏ ᴀɴᴅ ᴍᴏɴɢᴏᴅʙ ᴀs ᴅᴀᴛᴀʙᴀsᴇ.*"
             "\n\n────────────────────"
             f"\n*➻ ᴜᴩᴛɪᴍᴇ »* {uptime}"
@@ -413,8 +430,8 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                             text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"
                         ),
                         InlineKeyboardButton(
-                            text="ɢɪᴛʜᴜʙ",
-                            url="https://github.com/ArchBots",
+                            text="ᴛᴇʟᴇɢʀᴀᴍ",
+                            url="https://github.com/itszoney",
                         ),
                     ],
                     [
@@ -439,21 +456,13 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_":
         query.message.edit_text(
             text=f"""
-*ʜᴇʏ,
- ᴛʜɪs ɪs {BOT_NAME},
-ᴀɴ ᴏᴩᴇɴ sᴏᴜʀᴄᴇ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ.*
+*ᴛʜᴇsᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ᴀʟʀᴇᴀᴅʏ ᴀʀᴇ ᴘᴜʙʟɪsʜᴇᴅ ʏᴏᴜ ᴄᴀɴ sᴇᴀʀᴄʜ ᴏɴ ɢɪᴛʜᴜʙ ғᴀʟʟᴇɴ ʀᴏʙᴏᴛ*
 
-ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ : [ᴛᴇʟᴇᴛʜᴏɴ](https://github.com/LonamiWebs/Telethon)
-[ᴩʏʀᴏɢʀᴀᴍ](https://github.com/pyrogram/pyrogram)
-[ᴩʏᴛʜᴏɴ-ᴛᴇʟᴇɢʀᴀᴍ-ʙᴏᴛ](https://github.com/python-telegram-bot/python-telegram-bot)
-ᴀɴᴅ ᴜsɪɴɢ [sǫʟᴀʟᴄʜᴇᴍʏ](https://www.sqlalchemy.org) ᴀɴᴅ [ᴍᴏɴɢᴏ](https://cloud.mongodb.com) ᴀs ᴅᴀᴛᴀʙᴀsᴇ.
+ᴡᴇ ᴅᴏ sɪᴍᴘʟᴇ ᴍᴏᴅɪғɪᴄᴀᴛɪᴏɴ ᴀɴᴅ ᴀᴅᴅᴇᴅ sᴏᴍᴇᴛʜɪɴɢ ᴜɴɪǫᴜᴇ ғᴇᴀᴛᴜʀᴇs
 
-
-*ʜᴇʀᴇ ɪs ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ :* [ɢɪᴛʜᴜʙ](https://github.com/ArchBots/ArchRobot)
-
-
-{BOT_NAME} ɪs ʟɪᴄᴇɴsᴇᴅ ᴜɴᴅᴇʀ ᴛʜᴇ [ᴍɪᴛ ʟɪᴄᴇɴsᴇ](https://github.com/ArchBots/ArchRobot/blob/master/LICENSE).
-© 2022 - 2023 | [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ](https://t.me/{SUPPORT_CHAT}), ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ.
+ʟɪᴋᴇ : ᴠᴏɪᴄᴇ ᴛᴀɢ, ғᴀɴᴅᴏᴍ ᴛᴇxᴛ ᴛᴀɢ, ᴅɪғғᴇʀᴇɴᴛ ʟᴀɴɢᴜᴀɢᴇ ᴛᴀɢ
+ 
+ᴄᴏᴅᴇ ʙʏ  [ᴢᴏɴᴇʏ](https://t.me/itszoney), ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ.
 """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -531,6 +540,8 @@ Only for admins
              f"""
 
 🌺 *ᴛʏᴘᴇ ᴀɴʏ ᴛᴇxᴛ ᴀғᴛᴇʀ ᴛʜᴇ ᴄᴏʀʀᴇsᴘᴏɴᴅɪɴɢ ᴄᴏᴍᴍᴀɴᴅ*✨
+
+/allvoice - ᴍᴇɴᴛɪᴏɴ ᴏʀ ᴛᴀɢ ᴜsᴇʀs ᴡɪᴛʜ ᴠᴏɪᴄᴇ ᴍᴀʏʙᴇ sʟᴏᴡ
 
 /htag  - ᴍᴇɴᴛɪᴏɴ ᴀʟʟ ᴛᴀɢs ɪɴ ʜɪɴᴅɪ
  
