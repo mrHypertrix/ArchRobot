@@ -472,9 +472,9 @@ def Source_about_callback(update: Update, context: CallbackContext):
         )
 
 def zoney_about_callback(update: Update, context: CallbackContext):
-    query = update.callback_query
+     query = update.callback_query
      if query.data == "zoney_":
-        query.message.edit_text(
+         query.message.edit_text(
             text=f"""
 **👀 Hey Baby 🖤** \n\n🌺 Welcome to our  {dispatcher.bot.first_name}  lovely community! 🍷📀 Advanced & 🎭 Enthusiastic 🌱 Supporter 🌼 of VC 🍄 Player 📣\n🕙 24x7 Active » For 🗨️ Telegraм ♨️ Channel 🎸 & 🏓 Groups 🎻\n💐 Feel 😍 Free 😇 to 🤖 Add Me 🩸\nSuperior 💥 High 💫 Quality 🦞 Audio 🎧 & 🔊 Video 🌷\nGroup Management: 📣 🎸 🏓 🎻 & more!\nSpecial Tagger: 🎶🎉 Engaging & Groovy!\n\nLet's make this group lively! 🎊🌈
 """,
