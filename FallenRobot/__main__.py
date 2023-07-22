@@ -471,7 +471,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
             disable_web_page_preview=True,
         )
 
-def Zoney_about_callback(update: Update, context: CallbackContext):
+def zoney_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
      if query.data == "zoney_":
         query.message.edit_text(
