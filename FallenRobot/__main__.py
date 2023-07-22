@@ -500,7 +500,7 @@ def zoney_about_callback(update: Update, context: CallbackContext):
                 ]
            ),
         )
-           elif query.data == "zoney_1":
+     elif query.data == "zoney_1":
                 query.message.edit_text(
                    text=f"* ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ꜰᴏʀ Tᴀɢ Aʟʟ: *"
                    f"""
@@ -523,7 +523,7 @@ Only for admins
                 ]
             ),
         )
-    elif query.data == "zoney_2":
+     elif query.data == "zoney_2":
          query.message.edit_text(
              text=f"*sᴘᴇᴄɪᴀʟ ᴛᴀɢɢᴇʀ*"
              f"""
@@ -553,7 +553,7 @@ Only for admins
                 ]
             ),
         )
-   elif query.data == "zoney_back":
+     elif query.data == "zoney_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
             PM_START_TEXT.format(escape_markdown(first_name), (START_IMG), BOT_NAME),
