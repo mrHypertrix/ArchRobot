@@ -430,7 +430,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                         ),
                         InlineKeyboardButton(
                             text="ᴛᴇʟᴇɢʀᴀᴍ",
-                            url="https://github.com/itszoney",
+                            url="https://t.me/itszoney",
                         ),
                     ],
                     [
