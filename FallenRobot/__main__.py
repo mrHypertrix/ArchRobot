@@ -849,7 +849,7 @@ def main():
         Source_about_callback, pattern=r"source_", run_async=True
     )
      zoney_callback_handler = CallbackQueryHandler(
-        Zoney_about_callback, pattern=r"zoney_", run_async=True
+        zoney_about_callback, pattern=r"zoney_"
     )
 
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
